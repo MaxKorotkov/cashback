@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Кэшбэк сервис CASHBACK.PRO: Отзывы</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<header class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top__wrapper">
+                <ul class="header-top__list">
+                    <li class="header-top__item">
+                        <a class="header-top__item-link" href="#">
+                            <picture class="header-top__logo-img">
+                                <source srcset="images/logo/cashback-logo-tablet.svg" media="(max-width: 1200px)">
+                                <img src="images/logo/cashback-logo.svg" alt="">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+                <form class="header-top__search" action="action_page.php">
+                    <input type="text" placeholder="Найти отзыв на товар" name="search-form" autocomplete="off">
+                    <button type="submit"></button>
+                </form>
+                <button class="header-top__btn-add" type="button">Добавить</button>
+                <a class="header-top__link" href="#">Как добавлять отзывы?</a>
+                <button class="header-menu__btn-reload mobile"></button>
+                <button class="header-search-form__btn mobile" type="submit"></button>
+                <button class="burger-menu mobile" id="burgerMenuBtn">
+                    <span class="burger-line"></span>
+                </button>
+                <button class="header-log__btn">Войти</button>
+                <a class="header-top__ava-link" href="#">
+                    <img class="header-top_ava-img" src="images/avatar.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header-menu">
+        <div class="container">
+            <div class="header-menu__wrapper">
+                <div class="header-menu__cat-wrapper">
+                    <button class="header-menu__cat-btn" id="headerCatListBtn"></button>
+                    <ul class="header-menu__cat-list" id="headerCatList">
+                        <li class="header-menu__cat-title">
+                            Категории
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="all" type="checkbox" name="all" value="Все">
+                            <label class="header-menu__cat-label" for="all">Все</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="phones" type="checkbox" name="phones"
+                                value="Телефоны и Аксессуары">
+                            <label class="header-menu__cat-label" for="phones">Телефоны и Аксессуары</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="computers" type="checkbox" name="computers"
+                                value="Компьютеры">
+                            <label class="header-menu__cat-label" for="computers">Компьютеры</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="office-equip" type="checkbox" name="office-equip"
+                                value="Оргтехника">
+                            <label class="header-menu__cat-label" for="office-equip">Оргтехника</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="appliances" type="checkbox" name="appliances"
+                                value="Бытовая техника">
+                            <label class="header-menu__cat-label" for="appliances">Бытовая техника</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="children-equip" type="checkbox"
+                                name="children-equip" value="Всё для детей">
+                            <label class="header-menu__cat-label" for="children-equip">Всё для детей</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-men" type="checkbox" name="for-men"
+                                value="Одежда для мужчин">
+                            <label class="header-menu__cat-label" for="for-men">Одежда для мужчин</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-woman" type="checkbox" name="for-woman"
+                                value="Одежда для женщин">
+                            <label class="header-menu__cat-label" for="for-woman">Одежда для женщин</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="clock" type="checkbox" name="clock" value="Часы">
+                            <label class="header-menu__cat-label" for="clock">Часы</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="handbags" type="checkbox" name="handbags"
+                                value="Сумки">
+                            <label class="header-menu__cat-label" for="handbags">Сумки</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="shoes" type="checkbox" name="shoes" value="Обувь">
+                            <label class="header-menu__cat-label" for="shoes">Обувь</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="home" type="checkbox" name="home" value="Дом">
+                            <label class="header-menu__cat-label" for="home">Дом</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="bijouterie" type="checkbox" name="bijouterie"
+                                value="Бижутерия">
+                            <label class="header-menu__cat-label" for="bijouterie">Бижутерия</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="beauty" type="checkbox" name="beauty"
+                                value="Красота">
+                            <label class="header-menu__cat-label" for="beauty">Красота</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="sport" type="checkbox" name="sport"
+                                value="Спорт и развлечения">
+                            <label class="header-menu__cat-label" for="sport">Спорт и развлечения</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-car" type="checkbox" name="for-car"
+                                value="Автотовары">
+                            <label class="header-menu__cat-label" for="for-car">Автотовары</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-pets" type="checkbox" name="for-pets"
+                                value="Зоотовары">
+                            <label class="header-menu__cat-label" for="for-pets">Зоотовары</label>
+                        </li>
+                        <li class="header-menu__cat-search">
+                            <button id="catListSearchBtn" type="submit">Поиск</button>
+                        </li>
+                        <li class="header-menu__cat-clear">
+                            <button id="catListClearBtn" type="submit">Сбросить</button>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <span class="active-page">Горячее</span>
+                    <ul class="nav-menu__list" id="menuList">
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Все</a>
+                        </li>
+                        <li class="nav-menu__item active">
+                            <a href="" class="nav-menu__link">Горячее
+                                <span class="nav-menu__link-counter">12</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Новое
+                                <span class="nav-menu__link-counter">99+</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Обсуждаемое
+                                <span class="nav-menu__link-counter">99+</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Мои закладки
+                                <span class="nav-menu__link-counter">13</span>
+                            </a>
+                        </li>
+                        <li class="header-menu__cat-search nav-menu__item mobile">
+                            <button id="cat-search" type="submit">Поиск</button>
+                        </li>
+                        <li class="header-menu__cat-clear nav-menu__item mobile">
+                            <button id="cat-clear" type="submit">Сбросить</button>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="header-menu__btn-reload">Обновить страницу</button>
+            </div>
+        </div>
+    </div>
+</header>
+	<main class="review-page">
+		<div class="container">
+			<a class="review-page__banner-link" href="#">
+				<span></span>
+			</a>
+			<aside class="review-page__aside">
+				<div class="top-review" id="topReview">
+    <p class="top-review__title" id="topReviewBtn">Лучшие</p>
+    <div class="top-review__card-title mobile">
+        <span class="top-title active">Дня</span>
+        <span class="top-title">Недели</span>
+        <span class="top-title">Месяц</span>
+    </div>
+    <div class="top-review__card" id="day-review">
+        <p class="top-review__card-title">Отзыв дня</p>
+        <div class="top-review__card-wrapper active">
+            <span class="top-review__reward">100₽ <span class="reward-text"> награда</span></span>
+            <img class="top-review__img" src="images/topcard-phone.png" alt="">
+            <div class="top-review__price-wrap">
+                <span class="top-review__old-price">1 999$</span>
+                <span class="top-review__discount">-50%</span>
+                <span class="top-review__new-price">999$</span>
+            </div>
+            <a class="top-review__link" href="">Подробнее</a>
+        </div>
+    </div>
+    <div class="top-review__card" id="week-review">
+        <p class="top-review__card-title">Отзыв недели</p>
+        <div class="top-review__card-wrapper">
+            <span class="top-review__reward">500₽ <span class="reward-text"> награда</span></span>
+            <img class="top-review__img" src="images/topcard-phone.png" alt="">
+            <div class="top-review__price-wrap">
+                <span class="top-review__old-price">1 999$</span>
+                <span class="top-review__discount">-50%</span>
+                <span class="top-review__new-price">999$</span>
+            </div>
+            <a class="top-review__link" href="">Подробнее</a>
+        </div>
+    </div>
+    <div class="top-review__card" id="month-review">
+        <p class="top-review__card-title">Отзыв месяца</p>
+        <div class="top-review__card-wrapper">
+            <span class="top-review__reward">2 500₽ <span class="reward-text"> награда</span></span>
+            <img class="top-review__img" src="images/topcard-phone.png" alt="">
+            <div class="top-review__price-wrap">
+                <span class="top-review__old-price">1 999$</span>
+                <span class="top-review__discount">-50%</span>
+                <span class="top-review__new-price">999$</span>
+            </div>
+            <a class="top-review__link" href="">Подробнее</a>
+        </div>
+    </div>
+</div>
+			</aside>
+			<div class="review-page__wrapper">
+				<article class="product-card active">
+    <img class="product-card__img" src="images/product-1.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Сетка для футбольных ворот ATEMI, 7.5 х 2.5 х 2 м</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">4 800$</span>
+                <span class="product-card__discount">-72%</span>
+                <span class="product-card__new-price">1 347$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">1540°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-2.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Домкрат гидравлический подкатной ЕРМАК 2 т …</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">132°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-4.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">6.4" Смартфон OPPO A91 128 ГБ черный</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">54°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-5.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Игровая консоль Nintendo Switch, красный, синий</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">1350°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-6.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">[Мск] Моторное масло Liqui Moly Sp Tec 5W-30, 4л</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">952°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+				<article class="product-card">
+    <img class="product-card__img" src="images/product-3.png" alt="">
+    <div class="product-card__wrapper">
+        <header class="roduct-card__header">
+            <h1 class="product-card__title">Скидка -30% от 1 шт. и - 40% от 6 шт. на все вина</h1>
+            <span class="product-card__share"></span>
+            <div class="product-card__header-col">
+                <span class="product-card__old-price">1 999$</span>
+                <span class="product-card__discount">-50%</span>
+                <span class="product-card__new-price">999$</span>
+                <span class="product-card__delivery">Платная доставка</span>
+            </div>
+        </header>
+        <p class="product-card__dscr">
+            В других магазинах в два раза дороже. Красный цвет. Толщина нитей сетки: 2.5 мм <br>*Доставка возможно
+            платная
+            для вашего региона<br>
+            Красный цвет. Толщина нитей сетки: 2.5 мм
+        </p>
+        <div class="rating">
+            <span class="rating__plus"></span>
+            <span class="rating__scale">
+                <span class="rating__regulator"></span>
+                <span class="rating__ruler"></span>
+                <span class="rating__circle">
+                    <span class="rating__counter">830°</span>
+                </span>
+            </span>
+            <span class="rating__minus"></span>
+        </div>
+        <footer class="product-card__footer">
+            <a class="product-card__author-link" href="#">
+                <img class="product-card__author-img" src="images/avatar-2.png" alt="">
+                <span class="product-card__author-name">СергейТанкин</span>
+            </a>
+            <a class="product-card__shop-link" href="#">Перейти в магазин</a>
+            <a class="product-card__shop-link mobile" href="#">В магазин</a>
+            <span class="product-card__marks"></span>
+            <a class="product-card__comments" href="">
+                <span class="product-card__comments-counter">23</span>
+            </a>
+        </footer>
+    </div>
+</article>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <button class="footer__btn-up" id="footerUp"></button>
+            <span class="footer__page-counter"><span class="current-page">1</span> из
+                <span class="total-page">124</span></span>
+            <button class="footer__btn-cat" id="footerMenuBtn">Категории</button>
+        </div>
+    </div>
+    <div class="footer__wrapper" id="footerMenu">
+        <div class="container">
+            <div class="footer__logo">
+                <ul class="header-top__list">
+                    <li class="header-top__item">
+                        <a class="header-top__item-link" href="#">
+                            <img class="header-top__logo-img" src="images/logo/cashback-logo.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <span class="footer__logo-text">Есть вопросы?</span>
+                <a href="" class="footer__logo-link">Пишите нам!</a>
+            </div>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <h4 class="footer__list-title">Категории</h4>
+                </li>
+                <li>
+                    <ul class="footer__cat-list">
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Все</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Телефоны и Аксессуары</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Компьютеры</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Оргтехника</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Бытовая техника</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Всё для детей</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Одежда для мужчин</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Одежда для женщин</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Часы</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Сумки</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Обувь</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Дом</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Бижутерия</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Красота</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Спорт и развлечения</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Автотовары</a>
+                        </li>
+                        <li class="footer__cat-item">
+                            <a class="footer__cat-link" href="#">Зоотовары</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <h4 class="footer__list-title">FAQ</h4>
+                </li>
+                <li>
+                    <ul class="footer__faq-list">
+                        <li class="footer__faq-item">
+                            <a class="footer__faq-link" href="#">Как это работает?</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer__bottom">
+                <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                <a class=" footer__bottom-link" href="#">Пользовательское соглашение</a>
+                <ul class=" footer__payment-list">
+                    <li class="footer__payment-item">
+                        <img class="footer__payment-logo" src="images/icons/qiwi.svg" alt="Qiwi logo w">
+                    </li>
+                    <li class="footer__payment-item">
+                        <img class="footer__payment-logo" src="images/icons/webmoney.svg" alt="Webmoney logo w">
+                    </li>
+                    <li class="footer__payment-item">
+                        <img class="footer__payment-logo" src="images/icons/mastercard.svg" alt="Mastercard w">
+                    </li>
+                    <li class="footer__payment-item">
+                        <img class="footer__payment-logo" src="images/icons/visa.svg" alt="Visa w">
+                    </li>
+                    <li class="footer__payment-item">
+                        <img class="footer__payment-logo" src="images/icons/yandex.svg" alt="Yandex money w">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
