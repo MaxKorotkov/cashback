@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кэшбэк сервис CASHBACK.PRO: Создание отзыва</title>
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top__wrapper">
+                    <ul class="header-top__list">
+                        <li class="header-top__item">
+                            <a class="header-top__item-link" href="#">
+                                <picture class="header-top__logo-img">
+                                    <source srcset="images/logo/cashback-logo-tablet.svg" media="(max-width: 1200px)">
+                                    <img src="images/logo/cashback-logo.svg" alt="">
+                                </picture>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="header-top__search" action="action_page.php">
+                        <input type="text" placeholder="Найти отзыв на товар" name="search-form" autocomplete="off">
+                        <button type="submit"></button>
+                    </form>
+                    <button class="header-top__btn-add" type="button">Добавить</button>
+                    <a class="header-top__link" href="#">Как добавлять отзывы?</a>
+                    <button class="header-menu__btn-reload mobile"></button>
+                    <button class="header-search-form__btn mobile" type="submit"></button>
+                    <button class="burger-menu mobile">
+                        <span class="burger-line"></span>
+                    </button>
+                    <button class="header-log__btn">Войти</button>
+                    <a class="header-top__ava-link" href="#">
+                        <img class="header-top_ava-img" src="images/avatar.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="creating-review">
+        <div class="container">
+            <h1 class="creating-review__title">
+                Создание нового отзыва
+            </h1>
+            <form class="creating-form">
+                <div class="creating-form__wrapper">
+                    <div class="creating-form__inner">
+                        <h2 class="creating-form__title"><span>1</span>Добавьте ваше фото для скидки</h2>
+                        <div class="creating-form__photo" tabindex="0">
+                        </div>
+                    </div>
+                    <div class="creating-form__inner">
+                        <h2 class="creating-form__title active"><span>2</span>Информация о скидке</h2>
+                        <ul class="info-list">
+                            <li class="info-item info-price" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-price">Цена стандартная </label>
+                                <input class="creating-form__input info-input" id="in-price" type="text"
+                                    placeholder="27.790">
+                            </li>
+                            <li class="info-item info-discoount" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-discoount">скидка в % </label>
+                                <input class="creating-form__input info-input" id="in-discoount" type="text"
+                                    placeholder="50">
+                            </li>
+                            <li class="info-item info-newprice" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-newprice">Цена со скидкой</label>
+                                <input class="creating-form__input info-input" id="in-newprice" type="text"
+                                    placeholder="13.345">
+                            </li>
+                        </ul>
+                        <ul class="info-list">
+                            <li class="info-item info-link" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-link">ссылка на товар</label>
+                                <input class="creating-form__input info-input" id="in-link" type="text"
+                                    placeholder="www.aliexpress.com/item/4001328159542.html?spm=a2g0o.tm537188.98">
+                            </li>
+                            <li class="info-item info-delprice" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-delprice">Цена доставки</label>
+                                <input class="creating-form__input info-input" id="in-delprice" type="text"
+                                    placeholder="0.0">
+                            </li>
+                            <li class="info-item info-delivery" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-delivery">Бесплатная доставка
+                                    <input class="creating-form__input info-input" id="in-delivery" type="checkbox">
+                                    <span class="checkbox-slide"></span>
+                                </label>
+                            </li>
+                        </ul>
+                        <ul class="info-list">
+                            <li class="info-item info-code" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-code">код промокода</label>
+                                <input class="creating-form__input info-input" id="in-code" placeholder="JET_31_b2">
+                            </li>
+                            <li class="info-item info-date" tabindex="0">
+                                <label class="creating-form__label info-label" for="in-date">начало и окончание
+                                    скидки</label>
+                                <input class="creating-form__input info-input" id="in-date" placeholder="02.03.2019 — 02.04.2020">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="creating-form__inner">
+                        <h2 class="creating-form__title"><span>3</span>Придумайте заголовок</h2>
+                        <input class="creating-form__input title-input" type="text"
+                            placeholder="Впишите сюда ваш заголовок">
+                    </div>
+                    <div class="creating-form__inner">
+                        <h2 class="creating-form__title"><span>4</span>Описание скидки</h2>
+                        <div class="text-input__wrapper">
+                            <textarea class="creating-form__input text-input"></textarea>
+                            <ul class="text-list">
+                                <li class="text-item"></li>
+                                <li class="text-item"></li>
+                                <li class="text-item"></li>
+                                <li class="text-item"></li>
+                                <li class="text-item"></li>
+                                <li class="text-item"></li>
+                                <li class="text-item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="creating-form__inner">
+                        <h2 class="creating-form__title"><span>5</span>Выберите категорию вашего отзыва</h2>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <input class="category-input" id="auto" name="category" type="radio" checked>
+                                <label class="category-label" for="auto"> Автотовары</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="bags" name="category" type="radio">
+                                <label class="category-label" for="bags"> Багаж и сумки</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="safety" name="category" type="radio">
+                                <label class="category-label" for="safety"> Безопосность и защита</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="appliances" name="category" type="radio">
+                                <label class="category-label" for="appliances"> Бытовая техника</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="for-children" name="category" type="radio">
+                                <label class="category-label" for="for-children"> Детские товары</label>
+                            </li>
+                        </ul>
+
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <input class="category-input" id="for-house" name="category" type="radio">
+                                <label class="category-label" for="for-house"> Дом и сад</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="for-woman" name="category" type="radio">
+                                <label class="category-label" for="for-woman"> Женская одежда</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="toys" name="category" type="radio">
+                                <label class="category-label" for="toys"> Игрушки</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="tools" name="category" type="radio">
+                                <label class="category-label" for="tools"> Инструменты</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="adapters" name="category" type="radio">
+                                <label class="category-label" for="adapters"> Кабели и переходники для сети</label>
+                            </li>
+                        </ul>
+
+
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <input class="category-input" id="computers" name="category" type="radio">
+                                <label class="category-label" for="computers"> Компьютеры и офисная техника</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="beauty" name="category" type="radio">
+                                <label class="category-label" for="beauty"> Красота</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="lamps" name="category" type="radio">
+                                <label class="category-label" for="lamps"> Лампы и свет</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="furniture" name="category" type="radio">
+                                <label class="category-label" for="furniture"> Мебель</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="for-men" name="category" type="radio">
+                                <label class="category-label" for="for-men"> Мужская одежда</label>
+                            </li>
+                        </ul>
+
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <input class="category-input" id="watches" name="category" type="radio">
+                                <label class="category-label" for="watches"> Наручные часы</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="underwear" name="category" type="radio">
+                                <label class="category-label" for="underwear"> Нижнее белье</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="footwear" name="category" type="radio">
+                                <label class="category-label" for="footwear"> Обувь</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="accessories" name="category" type="radio">
+                                <label class="category-label" for="accessories"> Одежда и аксессуары</label>
+                            </li>
+                        </ul>
+
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <input class="category-input" id="food" name="category" type="radio">
+                                <label class="category-label" for="food"> Продукты</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="business" name="category" type="radio">
+                                <label class="category-label" for="business"> Промышленность и бизнес</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="repair" name="category" type="radio">
+                                <label class="category-label" for="repair"> Ремонт и обустройство дома</label>
+                            </li>
+                        </ul>
+
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <input class="category-input" id="phones" name="category" type="radio">
+                                <label class="category-label" for="phones"> Телефоны и аксессуары</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="jewelery" name="category" type="radio">
+                                <label class="category-label" for="jewelery"> Украшения и аксессуары</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="sport" name="category" type="radio">
+                                <label class="category-label" for="sport"> Хобби и спорт</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="electronics" name="category" type="radio">
+                                <label class="category-label" for="electronics"> Электроника</label>
+                            </li>
+                        </ul>
+
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <input class="category-input" id="el-equipment" name="category" type="radio">
+                                <label class="category-label" for="el-equipment"> Электротехническое
+                                    оборудование</label>
+                            </li>
+                            <li class="category-item">
+                                <input class="category-input" id="el-omponents" name="category" type="radio">
+                                <label class="category-label" for="el-omponents"> Электронные компоненты и
+                                    материалы</label>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="creating-form__inner preview__wrapper">
+                        <button class="preview__edit-btn">Предпросмотр</button>
+                        <button class="preview__publicate-btn">Опубликовать</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <button class="footer__btn-up"></button>
+                <button class="footer__btn-cat">Категории</button>
+            </div>
+        </div>
+        <div class="footer__wrapper">
+            <div class="container">
+                <div class="footer__logo">
+                    <ul class="header-top__list">
+                        <li class="header-top__item">
+                            <a class="header-top__item-link" href="#">
+                                <img class="header-top__logo-img" src="images/logo/cashback-logo.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="footer__logo-text">Есть вопросы?</span>
+                    <a href="" class="footer__logo-link">Пишите нам!</a>
+                </div>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <h4 class="footer__list-title">Категории</h4>
+                    </li>
+                    <li>
+                        <ul class="footer__cat-list">
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Все</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Телефоны и Аксессуары</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Компьютеры</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Оргтехника</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Бытовая техника</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Всё для детей</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Одежда для мужчин</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Одежда для женщин</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Часы</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Сумки</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Обувь</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Дом</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Бижутерия</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Красота</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Спорт и развлечения</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Автотовары</a>
+                            </li>
+                            <li class="footer__cat-item">
+                                <a class="footer__cat-link" href="#">Зоотовары</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <h4 class="footer__list-title">FAQ</h4>
+                    </li>
+                    <li>
+                        <ul class="footer__faq-list">
+                            <li class="footer__faq-item">
+                                <a class="footer__faq-link" href="#">Как это работает?</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="footer__bottom">
+                    <a class="footer__bottom-link" href="#">Политика конфиденциальности</a>
+                    <a class=" footer__bottom-link" href="#">Пользовательское соглашение</a>
+                    <ul class=" footer__payment-list">
+                        <li class="footer__payment-item">
+                            <img class="footer__payment-logo" src="images/icons/qiwi.svg" alt="Qiwi logo w">
+                        </li>
+                        <li class="footer__payment-item">
+                            <img class="footer__payment-logo" src="images/icons/webmoney.svg" alt="Webmoney logo w">
+                        </li>
+                        <li class="footer__payment-item">
+                            <img class="footer__payment-logo" src="images/icons/mastercard.svg" alt="Mastercard w">
+                        </li>
+                        <li class="footer__payment-item">
+                            <img class="footer__payment-logo" src="images/icons/visa.svg" alt="Visa w">
+                        </li>
+                        <li class="footer__payment-item">
+                            <img class="footer__payment-logo" src="images/icons/yandex.svg" alt="Yandex money w">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

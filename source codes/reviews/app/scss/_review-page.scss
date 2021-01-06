@@ -1,0 +1,418 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  &__item,
+  &__link {
+    color: #a8a8a8;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  &__item {
+    position: relative;
+    & + &::before {
+      content: "/";
+      position: absolute;
+      color: #a8a8a8;
+      font-size: 12px;
+      line-height: 15px;
+      left: 3px;
+    }
+    & + & {
+      padding-left: 10px;
+    }
+  }
+}
+
+// Врапперы
+.review-article {
+  &__content {
+    max-width: 942px;
+    width: 100%;
+    margin-top: 8px;
+    padding: 40px 0px;
+    background-color: #ffffff;
+    &-wrapper {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 24px;
+    }
+  }
+  &__author {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.review-article h2 {
+  color: #241f20;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.002em;
+}
+.review-article__author a img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.review-article__author a span {
+  display: block;
+  margin-bottom: 24px;
+  color: #5a5a5a;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.002em;
+}
+.review-article__content-wrapper span {
+  display: block;
+  margin-bottom: 49px;
+  color: #a8a8a8;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.002em;
+  text-align: center;
+}
+.review-article__content-wrapper p {
+  color: #5a5a5a;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  & + p {
+    margin-top: 18px;
+  }
+}
+.review-article__content-wrapper p a {
+  color: #0876c5;
+  text-transform: uppercase;
+}
+.review-article__content-wrapper img {
+  display: block;
+  max-width: 500px;
+  margin: 32px auto;
+  border-radius: 5px;
+}
+.review-article ul li p {
+  margin: 24px 0 16px;
+  color: #5a5a5a;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+}
+.review-article ul li ul {
+  margin-bottom: 24px;
+}
+.review-article ul li ul li {
+  display: flex;
+  position: relative;
+  padding-left: 32px;
+  color: #5a5a5a;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  & + li {
+    margin-top: 16px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(103.77deg, #4aefe5 -15.58%, #cdea20 121.87%);
+  }
+}
+.comments {
+  max-width: 942px;
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 96px;
+  &__wrapper {
+    padding: 0 24px;
+    background-color: #fff;
+    padding-bottom: 24px;
+  }
+  &__box-reply {
+    max-width: 848px;
+    width: 100%;
+    margin-left: auto;
+    padding-bottom: 12px;
+    &__field {
+      display: flex;
+      position: relative;
+      align-items: center;
+      min-height: 33px;
+      margin-top: 16px;
+      padding-left: 44px;
+    }
+  }
+  &__card {
+    display: block;
+    position: relative;
+    max-width: 895px;
+    width: 100%;
+    padding-top: 24px;
+    padding-left: 47px;
+  }
+
+  &__card-reply {
+    display: block;
+    position: relative;
+    margin-top: 16px;
+    padding-left: 40px;
+    padding-top: 17px;
+    & .comments__header img {
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 0;
+      top: 17px;
+      border-radius: 50%;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #e1e1e1;
+    }
+  }
+  &__footer {
+    display: flex;
+  }
+}
+
+.comments {
+  & p {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 16px;
+    color: #241f20;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.002em;
+    & span {
+      position: absolute;
+      top: 0;
+      right: -19px;
+      color: #241f20;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  &__header img {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 24px;
+    border-radius: 50%;
+  }
+  &__header img + span,
+  &__header + span span {
+    color: #0876c5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+  }
+  &__header span {
+    color: #a8a8a8;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+  }
+  &__header + span {
+    display: block;
+    margin: 8px 0;
+    color: #5a5a5a;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+  }
+
+  &__footer > span {
+    color: #a8a8a8;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+  }
+  &__footer > button {
+    margin-left: 16px;
+    color: #0876c5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+    background-color: transparent;
+  }
+  &__footer > button + span {
+    position: relative;
+    margin-left: auto;
+    color: #5a5a5a;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 0.002em;
+    &::after {
+      content: url(../images/icons/like.svg);
+      display: inline;
+      position: relative;
+      width: 18px;
+      height: 15px;
+    }
+    &.active {
+      padding-left: 24px;
+    }
+    &.active.comments__likes::after {
+      content: url(../images/icons/like-active.svg);
+      display: inline-block;
+      position: absolute;
+      width: 18px;
+      height: 15px;
+      left: 0;
+    }
+  }
+  &__card + button {
+    margin-top: 24px;
+    color: #0876c5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+    background-color: transparent;
+  }
+}
+// Поле ввода
+.comments {
+  &__field {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 40px;
+    margin-top: 24px;
+    padding-left: 47px;
+  }
+  &__field-img .header-top_ava-img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 0;
+  }
+  &__field-img + span {
+    display: flex;
+    align-items: center;
+    max-width: 804px;
+    width: 100%;
+    min-height: 33px;
+    padding: 0 8px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    color: #a8a8a8;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+  }
+  &__field-btn {
+    position: relative;
+    width: 24px;
+    height: 28px;
+    margin-left: 16px;
+    background-color: transparent;
+    &::after {
+      content: url(../images/icons/send-btn.svg);
+      width: 24px;
+      height: 28px;
+    }
+  }
+}
+// Поле ввода
+.other-reviews {
+  margin-bottom: 96px;
+}
+.other-reviews__title {
+  margin-bottom: 16px;
+  color: #241f20;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.002em;
+}
+
+// Страница предпросмотра
+.preview__wrapper {
+  display: flex;
+  max-width: 942px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 86px;
+}
+.preview__edit-btn {
+  min-width: 214px;
+  height: 56px;
+  border: 1px solid #8def9f;
+  background-color: transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #26472c;
+  opacity: 0.7;
+}
+.preview__publicate-btn {
+  position: relative;
+  min-width: 214px;
+  height: 56px;
+  padding-right: 57px;
+  background: linear-gradient(103.77deg, #4aefe5 -15.58%, #cdea20 121.87%);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  color: #241f20;
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 24px;
+    height: 29px;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='29' viewBox='0 0 25 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.85648 28.7805H16.665L24.9023 14.3797L17.0938 0H9.28522L15.4712 11.4012H0.751019V17.402H15.3701L8.85648 28.7805Z' fill='black'/%3E%3C/svg%3E%0A");
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+// Страница предпросмотра

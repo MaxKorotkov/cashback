@@ -1,0 +1,168 @@
+<header class="header">
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top__wrapper">
+                <ul class="header-top__list">
+                    <li class="header-top__item">
+                        <a class="header-top__item-link" href="#">
+                            <picture class="header-top__logo-img">
+                                <source srcset="images/logo/cashback-logo-tablet.svg" media="(max-width: 1200px)">
+                                <img src="images/logo/cashback-logo.svg" alt="">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+                <form class="header-top__search" action="action_page.php">
+                    <input type="text" placeholder="Найти отзыв на товар" name="search-form" autocomplete="off">
+                    <button type="submit"></button>
+                </form>
+                <button class="header-top__btn-add" type="button">Добавить</button>
+                <a class="header-top__link" href="#">Как добавлять отзывы?</a>
+                <button class="header-menu__btn-reload mobile"></button>
+                <button class="header-search-form__btn mobile" type="submit"></button>
+                <button class="burger-menu mobile" id="burgerMenuBtn">
+                    <span class="burger-line"></span>
+                </button>
+                <button class="header-log__btn">Войти</button>
+                <a class="header-top__ava-link" href="#">
+                    <img class="header-top_ava-img" src="images/avatar.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header-menu">
+        <div class="container">
+            <div class="header-menu__wrapper">
+                <div class="header-menu__cat-wrapper">
+                    <button class="header-menu__cat-btn" id="headerCatListBtn"></button>
+                    <ul class="header-menu__cat-list" id="headerCatList">
+                        <li class="header-menu__cat-title">
+                            Категории
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="all" type="checkbox" name="all" value="Все">
+                            <label class="header-menu__cat-label" for="all">Все</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="phones" type="checkbox" name="phones"
+                                value="Телефоны и Аксессуары">
+                            <label class="header-menu__cat-label" for="phones">Телефоны и Аксессуары</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="computers" type="checkbox" name="computers"
+                                value="Компьютеры">
+                            <label class="header-menu__cat-label" for="computers">Компьютеры</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="office-equip" type="checkbox" name="office-equip"
+                                value="Оргтехника">
+                            <label class="header-menu__cat-label" for="office-equip">Оргтехника</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="appliances" type="checkbox" name="appliances"
+                                value="Бытовая техника">
+                            <label class="header-menu__cat-label" for="appliances">Бытовая техника</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="children-equip" type="checkbox"
+                                name="children-equip" value="Всё для детей">
+                            <label class="header-menu__cat-label" for="children-equip">Всё для детей</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-men" type="checkbox" name="for-men"
+                                value="Одежда для мужчин">
+                            <label class="header-menu__cat-label" for="for-men">Одежда для мужчин</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-woman" type="checkbox" name="for-woman"
+                                value="Одежда для женщин">
+                            <label class="header-menu__cat-label" for="for-woman">Одежда для женщин</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="clock" type="checkbox" name="clock" value="Часы">
+                            <label class="header-menu__cat-label" for="clock">Часы</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="handbags" type="checkbox" name="handbags"
+                                value="Сумки">
+                            <label class="header-menu__cat-label" for="handbags">Сумки</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="shoes" type="checkbox" name="shoes" value="Обувь">
+                            <label class="header-menu__cat-label" for="shoes">Обувь</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="home" type="checkbox" name="home" value="Дом">
+                            <label class="header-menu__cat-label" for="home">Дом</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="bijouterie" type="checkbox" name="bijouterie"
+                                value="Бижутерия">
+                            <label class="header-menu__cat-label" for="bijouterie">Бижутерия</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="beauty" type="checkbox" name="beauty"
+                                value="Красота">
+                            <label class="header-menu__cat-label" for="beauty">Красота</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="sport" type="checkbox" name="sport"
+                                value="Спорт и развлечения">
+                            <label class="header-menu__cat-label" for="sport">Спорт и развлечения</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-car" type="checkbox" name="for-car"
+                                value="Автотовары">
+                            <label class="header-menu__cat-label" for="for-car">Автотовары</label>
+                        </li>
+                        <li class="header-menu__cat-item">
+                            <input class="header-menu__cat-input" id="for-pets" type="checkbox" name="for-pets"
+                                value="Зоотовары">
+                            <label class="header-menu__cat-label" for="for-pets">Зоотовары</label>
+                        </li>
+                        <li class="header-menu__cat-search">
+                            <button id="catListSearchBtn" type="submit">Поиск</button>
+                        </li>
+                        <li class="header-menu__cat-clear">
+                            <button id="catListClearBtn" type="submit">Сбросить</button>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul class="nav-menu__list" id="menuList">
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Все</a>
+                        </li>
+                        <li class="nav-menu__item active">
+                            <a href="" class="nav-menu__link">Горячее
+                                <span class="nav-menu__link-counter">12</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Новое
+                                <span class="nav-menu__link-counter">99+</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Обсуждаемое
+                                <span class="nav-menu__link-counter">99+</span>
+                            </a>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a href="" class="nav-menu__link">Мои закладки
+                                <span class="nav-menu__link-counter">13</span>
+                            </a>
+                        </li>
+                        <li class="header-menu__cat-search nav-menu__item mobile">
+                            <button id="cat-search" type="submit">Поиск</button>
+                        </li>
+                        <li class="header-menu__cat-clear nav-menu__item mobile">
+                            <button id="cat-clear" type="submit">Сбросить</button>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="header-menu__btn-reload">Обновить страницу</button>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,103 @@
+.add-review {
+  text-align: center;
+  &__title {
+    margin-top: 58px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.002em;
+  }
+  &__list-title {
+    margin-top: 64px;
+    color: #241f20;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__list {
+    counter-reset: listCounter;
+    display: flex;
+    justify-content: center;
+    margin-top: 29px;
+    margin-bottom: 64px;
+  }
+  &__item {
+    counter-increment: listCounter;
+    position: relative;
+    max-width: 116px;
+    width: 100%;
+    min-height: 88px;
+    padding-top: 56px;
+    text-align: left;
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    & + & {
+      margin-left: 32px;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 58px;
+      height: 40px;
+      top: 0;
+      left: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='59' height='40' viewBox='0 0 59 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48.7792 37.5186C47.8833 39.0551 46.2385 40 44.4599 40H5.5C2.73858 40 0.5 37.7614 0.5 35V5C0.5 2.23858 2.73857 0 5.5 0L45.0086 0C46.8289 0 48.5053 0.989233 49.3854 2.58262L59 19.9904L48.7792 37.5186Z' fill='%23FFCC00'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &::after {
+      content: counter(listCounter);
+      position: absolute;
+      left: 19px;
+      top: 5px;
+      color: #241f20;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      letter-spacing: 0.002em;
+    }
+  }
+  &__btn {
+    height: 40px;
+    min-width: 179px;
+    color: #025833;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.002em;
+    background: linear-gradient(103.77deg, #4aefe5 -15.58%, #cdea20 121.87%);
+    border-radius: 5px;
+  }
+  &__text-wrapper {
+    max-width: 517px;
+    width: 100%;
+    margin: 24px auto 77px;
+    text-align: left;
+  }
+  &__text,
+  &__small-list {
+    font-size: 16px;
+    line-height: 20px;
+    color: #5a5a5a;
+  }
+  &__text + &__text{
+      margin-top: 16px;
+  }
+  &__small-list {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0 16px;
+    padding-left: 16px;
+  }
+}
+.txt-bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5a5a5a;
+}
